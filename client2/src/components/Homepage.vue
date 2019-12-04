@@ -1,0 +1,39 @@
+<template>
+<diV class="home">
+  <v-container>
+    <v-row
+      v-for="n in 2"
+      :key="n"
+      :class="n === 1 ? 'mb-6' : ''"
+      no-gutters
+    >
+      <v-col
+        v-for="k in n + 1"
+        :key="k"
+      >
+        <v-card
+          class="pa-2"
+          outlined
+          tile
+        >
+          {{ k }} of {{ n + 1 }}
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
+</diV>
+</template>
+<style scoped>
+</style>
+<script>
+export default {
+  name: 'home',
+  data () {
+    return {
+      title: 'Hello',
+      msg: 'Hello world',
+      tt: ''
+    }
+  }
+}
+</script>
