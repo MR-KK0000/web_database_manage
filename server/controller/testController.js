@@ -10,6 +10,8 @@ testcontroller.find = async (req,res) =>{
 
 testcontroller.buttonone = async (req,res) =>{
     try {
+       var dd = req.body
+       console.log(dd.dd)
         res.status(200).json({message: "button 1"})  
     } catch (error) {
         res.sataus(400).json({message: error})
